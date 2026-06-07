@@ -19,6 +19,18 @@
                    FontSize="24" FontWeight="Bold" 
                    FontFamily="Segoe UI" Margin="0,0,0,15"/>
 
+        <!-- Заголовок с логотипом -->
+        <StackPanel Grid.Row="0" Orientation="Horizontal">
+            <Image Source="/Images/Мастер пол.png"        
+                   Width="40" 
+                   Height="40" 
+                   Margin="0,0,15,0"
+                   Stretch="Uniform"/>
+            <TextBlock Text="Партнеры компании" 
+               FontSize="24" FontWeight="Bold" 
+               FontFamily="Segoe UI" VerticalAlignment="Center"/>
+        </StackPanel>
+
         <!-- Шапка -->
         <Grid Grid.Row="1" Margin="0,0,0,5">
             <Grid.ColumnDefinitions>
