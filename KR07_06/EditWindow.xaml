@@ -1,0 +1,50 @@
+﻿<Window x:Class="KR07_06.EditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Партнер" Height="450" Width="500"
+        WindowStartupLocation="CenterOwner">
+
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Наименование:"/>
+        <TextBox x:Name="txtName" Grid.Row="0" Grid.Column="1" Margin="0,0,0,5"/>
+
+        <TextBlock Grid.Row="1" Grid.Column="0" Text="Тип:"/>
+        <ComboBox x:Name="cmbType" Grid.Row="1" Grid.Column="1" DisplayMemberPath="PartnerType" SelectedValuePath="PartnerTypeID" Margin="0,0,0,5"/>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="Директор:"/>
+        <TextBox x:Name="txtDirector" Grid.Row="2" Grid.Column="1" Margin="0,0,0,5"/>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="Телефон:"/>
+        <TextBox x:Name="txtPhone" Grid.Row="3" Grid.Column="1" Margin="0,0,0,5"/>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="Email:"/>
+        <TextBox x:Name="txtEmail" Grid.Row="4" Grid.Column="1" Margin="0,0,0,5"/>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="Адрес:"/>
+        <TextBox x:Name="txtAddress" Grid.Row="5" Grid.Column="1" Margin="0,0,0,5"/>
+
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="Рейтинг:"/>
+        <TextBox x:Name="txtRating" Grid.Row="6" Grid.Column="1" Margin="0,0,0,5"/>
+
+        <StackPanel Grid.Row="7" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,15,0,0">
+            <Button Content="Сохранить" Width="100" Click="SaveClick" Background="#67BA80" Foreground="White"/>
+            <Button Content="Отмена" Width="100" Margin="10,0,0,0" Click="CancelClick"/>
+        </StackPanel>
+    </Grid>
+</Window>
